@@ -9,10 +9,18 @@ What
 How
 ---
 
+    <span>0 times</span>
     ​<button>0 times</button>​​​​​​​​​​​​
+    <button>0 times</button>​​​​​​​​​​​​
 
 -
 
-    $(document).times("click", "button", function(evt) {
+    var $span = $("span");
+    
+    $("button").times("click", function(evt) {
       evt.target.innerText = evt.times + " times";
-    });​
+    });
+    
+    $(document).times("click", "button", function(evt) {
+      $span.text(evt.times + " times");
+    });

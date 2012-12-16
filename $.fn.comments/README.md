@@ -4,7 +4,7 @@ $.fn.comments
 What
 ----
 
-Get children comments node of the matched elements.
+Get children comment nodes of the matched elements.
 
 How
 ---

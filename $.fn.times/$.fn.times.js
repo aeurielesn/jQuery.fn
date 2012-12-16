@@ -10,7 +10,6 @@ $.fn.times = function(type, selector, fn) {
             var times = 0;
             $self.on(typ, selector, function(evt) {
                 evt.times = ++times;
-                console.log(times);
                 fn.call($self, evt);
             });
         });

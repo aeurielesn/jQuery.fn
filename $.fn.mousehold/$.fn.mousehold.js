@@ -16,15 +16,14 @@ $.fn.mousehold = function(selector, fn, delay) {
             clearInterval(timer);
         };
         this.each(function() {
-            var $this = $(this);
-            $this.on({
+            $(this).on({
                 mousedown: function(evt) {
                     var $self = $(this);
                     evt.times = times++;
                     timer = setTimeout(function() {
                         $self.trigger("mousedown");
                     }, delay);
-                    fn.call(self, evt);
+                    fn.call(this, evt);
                 },
                 mouseout: clear,
                 mouseup: clear
